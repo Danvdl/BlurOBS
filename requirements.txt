@@ -1,0 +1,4 @@
+ultralytics
+PyQt6
+pyvirtualcam
+opencv-python

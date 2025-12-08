@@ -1,0 +1,18 @@
+{
+    "obs_width": 1280,
+    "obs_height": 720,
+    "fps": 30,
+    "confidence_threshold": 0.5,
+    "target_classes": [
+        73
+    ],
+    "auto_blur": true,
+    "show_preview": false,
+    "use_custom_model": true,
+    "custom_classes": [
+        "credit card",
+        "id card",
+        "passport",
+        "document"
+    ]
+}
