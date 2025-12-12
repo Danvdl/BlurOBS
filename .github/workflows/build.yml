@@ -3,6 +3,8 @@ name: Build and Release
 on:
   push:
     branches: [ "main", "dev" ]
+    tags:
+      - 'v*'
   pull_request:
     branches: [ "main", "dev" ]
 
@@ -10,12 +12,14 @@ jobs:
   build:
     name: Build Windows Executable
     runs-on: windows-latest
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
       with:
-        lfs: true  # Enable LFS if models are stored with LFS
+        lfs: true
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -36,6 +40,16 @@ jobs:
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: BlurOBS-Windows-${{ github.ref_name }}
+        name: BlurOBS-Windows-${{ github.sha }}
         path: dist/BlurOBS.exe
         retention-days: 5
+
+    - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/BlurOBS.exe
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
