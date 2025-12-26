@@ -69,10 +69,10 @@ pip install pyinstaller
 build.bat
 
 # Or manually:
-pyinstaller BlurOBS.spec --clean
+pyinstaller SecureStudio.spec --clean
 ```
 
-Output: `dist/BlurOBS.exe`
+Output: `dist/SecureStudio.exe`
 
 ---
 
@@ -85,11 +85,11 @@ Output: `dist/BlurOBS.exe`
 
 ---
 
-## � Logging
+## 📋 Logging
 
-BlurOBS includes a comprehensive logging system for debugging and event tracking.
+SecureStudio includes a comprehensive logging system for debugging and event tracking.
 
-**Log Location:** `%USERPROFILE%\.blurobs\logs\`
+**Log Location:** `%USERPROFILE%\.securestudio\logs\`
 
 | Log File | Purpose |
 |----------|---------|
@@ -125,7 +125,7 @@ python run.py --debug
 
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Webcam    │────▶│  BlurOBS    │────▶│  OBS Studio │
+│   Webcam    │────▶│SecureStudio │────▶│  OBS Studio │
 │             │     │  (AI + Blur)│     │  (Virtual   │
 └─────────────┘     └─────────────┘     │   Camera)   │
                                         └─────────────┘

@@ -35,20 +35,20 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller BlurOBS.spec
+        pyinstaller SecureStudio.spec
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: BlurOBS-Windows-${{ github.sha }}
-        path: dist/BlurOBS.exe
+        name: SecureStudio-Windows-${{ github.sha }}
+        path: dist/SecureStudio.exe
         retention-days: 5
 
     - name: Create Release
       if: startsWith(github.ref, 'refs/tags/')
       uses: softprops/action-gh-release@v1
       with:
-        files: dist/BlurOBS.exe
+        files: dist/SecureStudio.exe
         draft: false
         prerelease: false
         generate_release_notes: true
