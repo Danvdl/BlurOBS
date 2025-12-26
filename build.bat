@@ -50,8 +50,8 @@ echo.
 echo Output: dist\SecureStudio.exe
 echo.
 echo To distribute:
-echo 1. Copy dist\BlurOBS.exe to your distribution folder
+echo 1. Copy dist\SecureStudio.exe to your distribution folder
 echo 2. Users need OBS Virtual Camera installed
-echo 3. Run BlurOBS.exe, then select "BlurOBS Virtual Camera" in OBS
+echo 3. Run SecureStudio.exe, then select "OBS Virtual Camera" in OBS
 echo.
 pause

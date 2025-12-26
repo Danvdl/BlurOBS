@@ -85,7 +85,7 @@ Output: `dist/SecureStudio.exe`
 
 ---
 
-## 📝 Logging
+## 📋 Logging
 
 SecureStudio includes a comprehensive logging system for debugging and event tracking.
 
